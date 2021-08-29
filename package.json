@@ -1,0 +1,12 @@
+{
+  "name": "velo-painting",
+  "version": "0.0.0",
+  "description": "VeloPainting",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "n-readlines": "^1.0.1"
+  }
+}

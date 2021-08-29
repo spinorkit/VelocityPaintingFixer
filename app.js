@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 const readlines = require('n-readlines');
-var os = require("os");
 
 var myArgs = process.argv.slice(2);
 console.log('myArgs: ', myArgs);

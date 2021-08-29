@@ -1,6 +1,8 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
+
 const readlines = require('n-readlines');
 var os = require("os");
 
@@ -15,7 +17,14 @@ try {
    const filename = myArgs[0];
    const lines = new readlines(filename);
 
-   const output = fs.createWriteStream('output.gcode');
+   const pathParts = path.parse(filename);
+   pathParts.name += '-fixed';
+   pathParts.name += pathParts.ext;
+
+   const outputPath = path.join(pathParts.dir,pathParts.name);
+   console.log('outputPath=',outputPath);
+
+   const output = fs.createWriteStream(outputPath);
 
    let line;
    let lineNumber = 0;
